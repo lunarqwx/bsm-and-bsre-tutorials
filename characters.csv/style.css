@@ -13,8 +13,3 @@ body {
     width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.thick-font {
-    font-weight: bold;
-    font-size: 1.2em;
-}
