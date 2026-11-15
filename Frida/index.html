@@ -1,0 +1,41 @@
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frida Guide</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../shion.ico">
+    </head>
+    <body>
+        <h1>Frida Guide</h1>
+        <p><b>What is Frida?</b></p>
+        <p>Frida is for adding custom stuff with coding other than using CSV, SC and other files. You can add custom mechanics, custom buttons, Brawl Pass, shop and more.</p>
+        <h1>How To Attach Frida Scripts?</h1>
+        <b>Requirements:</b> 
+        <p>- Apktool M</p>
+        <p>- Mt manager(optional)</p>
+        <p><b>1.</b> Go download <a href="https://github.com/frida/frida/releases">Frida Releases</a>.</p>
+        <p>I think the version doesn't really matter, but I heard that 16.0.0 is better.</p> 
+        <p>You can rename it to anything you want, for an example "libbunny.so". But keep lib at the beginning.</p>
+        <p><b>2.</b> Decompile your apk using Apktool M, with classes.dex.</p>
+        <b>Go to:</b>
+        <pre class="hacc-box">smali/com/supercell/titan/GameApp.smali</pre>
+        <p><b>3.</b> Search "g" (include the "). You should see see "cat" text 3 lines later. At bottom of the cat add:</p>
+        <pre class="hacc-box">     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V 
+     
+     const-string v0, "XXX"</pre>
+        <p>XXX will be your libscript name, for example if you used bunny then name it "bunny".</p>
+        <p>After these put your libbunny.so (Frida Gagdet) in lib folder.</p>
+        <p><b>4.</b> Now create a file named "libXXX.config.so"(for an example, libbunny.config.so). Put this in that file:</p>
+        <pre class="hacc-box">     {
+         "interaction": {
+             "type":"script",
+             "path":"libXXX.script.so",
+             "on_change":"reload"
+         }
+     }</pre>
+       <p>libXXX.script.so will be "libbunny.script.so" for an example.</p>
+       <p><b>5.</b> Take the libscript.script.js file (the Frida script itself). Rename it like you did before, for me it's libbunny.script.so add `.so` at the end, not `.js`.</p>
+       <p>If you want to add a script to your Brawl Stars Mod you have to create your own Frida scripts or get free & public ones from <a href="https://dsc.gg/coolbrawl">Supercell World Discord Server</a>.</p>     
+       <p><b>6.</b> After these compile ur project and download the APK, it should work. Now you have your scripted Brawl Stars Mod!</p>
