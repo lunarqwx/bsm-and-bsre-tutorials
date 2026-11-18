@@ -113,6 +113,17 @@ Domain = Trunk
         <p><b>Pet:</b> Brawlers pet.</p>
         <p><b>Speed:</b> Characters speed.</p>
         <p><b>Hitpoints:</b> Characters HP.</p>
+        <p>Heres a formula for HP and Damage points depends on the level, made by <a href="https://discordapp.com/users/600670954753884190">Gabriel</a> and <a href="https://discordapp.com/users/734049756048785508">Mortibi</a>.</p>
+        <pre class="hacc-box">maxHitpoints: int = int(input("Maximum Hitpoints: "))
+maxDamage: int = int(input("Maximum Damage: "))
+heroLevel: int = int(input("Brawler Level: "))
+
+baseHealth = int(maxHitpoints / (1 + (heroLevel - 1) / 20))
+baseDamage = int(maxDamage / (1 + (heroLevel - 1) / 20))
+
+print(f"Base hitpoints at level 1: {baseHealth}")
+print(f"Base damage at level 1: {baseDamage}")
+        </pre>
         <p><b>MeleeAutoAttackSplashDamage:</b> Isn't used.</p>
         <p><b>AutoAttackSpeedMs:</b> NPC or pet's attacks speed as milliesecond.</p>
         <p><b>AutoAttackDamage:</b> NPC or pet's attacks damage.</p>
