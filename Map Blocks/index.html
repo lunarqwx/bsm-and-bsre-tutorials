@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map Blocks</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../shion.ico">
+    </head>
+    <body>
+      <h1>Map Blocks</h1>
+      <p>Map blocks are a small portion of the map which you can use to build a full sized map using multiple different parts, or even randomize them by giving different parts the same name.</p>
+      <p>Each map block is structured to be 8x8. Multiple blocks can have the same name and the game will choose a random one during the game. As for the map preview, the game will choose the first block that comes up for the preview (in the order that it's placed inside map_blocks.csv)</p>
+      <p>You can check map_blocks.csv for further reference on its structure.</p>
+      <h1>Map Structure</h1>
+      <p>Inside maps.csv, you can find GeneratedRobo which serves as a great reference in order to create your very own randomized map.</p>
+      <p>You can use as many blocks you want in order to create your map, you just have to use 0 as spacing.</p>
+      <p><b>WARNING:</b> You MUST use 0 in spacing (example: blockfirst,0,blocklast,0) OTHERWISE your map wont work and your game will freeze.</p>
+      <h1>CodeName</h1>
+      <p>Unlike CodeName in maps.csv which uses plain numbers to index the map data, map blocks use both letters and numbers to index (r0, r1) etc.</p>
+      <p>If your Data isn't indexed, the game will simply not read that part of the map and you'll be left with a corrupted block/map.</p>
+      <h1>Group</h1>
+      <p>First index of your map block data is the Group's name. Multiple different map blocks can have the same name, the game will simply choose one at random during map initialization. The second index is this: ****</p>
+      <p>While I don't know why that is used in particular but it is important so keep it there</p>
+      <h1>Data</h1>
+      <p>Map data. Each Row contains a layer of the map. You can have a maximum of 8 tiles and 8 layers, any more and the game refuses to load. this is frustrating if you want to do showdown maps because you have to use a lot more pieces which can get hard to do.</p>
+
+      <p>Article made by <a href="https://discordapp.com/users/734049756048785508">Mortibi</a></p>
+      <script src="site.js"></script>
+      <p>Join our Discord server for more help and support: <a href="https://dsc.gg/BTElements">https://dsc.gg/BTElements</a></p>
+    </body>
+</html>
