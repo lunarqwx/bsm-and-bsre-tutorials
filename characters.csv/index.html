@@ -105,7 +105,7 @@ Geisha = Kaze
 Stalker = Allie
 Domain = Trunk
 </pre>
-        <p><b>LockedForChronos:</b> This is not really used.</p>
+        <p><b>LockedForChronos:</b> Unlike disabled, this allows the brawler to be enabled after the serverside timer ends.</p>
         <p><b>Disabled:</b> If it setted as "true", the brawler won't be shown in the brawler tab.</p>
         <p><b>ItemName:</b> The brawlers name are used in this column. You have to use frida to make your custom brawlers work in there. Otherwise it will crash. But you can use an existing brawlers name.</p>
         <p><b>WeaponSkill:</b> Brawlers attack which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/skills.csv/">skills.csv</a>.</p>
@@ -122,8 +122,21 @@ Domain = Trunk
         <p><b>AutoAttackProjectile:</b> The name of the projectile for NPC and pets.</p>
         <p><b>AutoAttackRange:</b> The range of the attack.</p>
         <p><b>RegeneratePerSecond:</b> I don't know.</p>
-        <p><b>UltiChargeMul:</b> The ulti charge per shot that hits enemy. If its low you get a little bit super charge, but if it's higher you get a lot super charge in one shot.</p>
-        <p><b>UltiChargeUltiMul:</b></p>
+        <p><b>UltiChargeMul and UltiChargeUltiMul:</b> They are for calculating the super charge when the brawler attack to the enemy. Here's a formula for them made by <a href="https://discordapp.com/users/600670954753884190">Gabriel</a>:</p>
+        <pre class="hacc-box">baseDamage: int = int(input("Base Damage: "))
+chargeMult: int = int(input("Charge Multiplier: "))
+
+chargeFromHit : int = int(chargeMult * (baseDamage / 100))
+print(f"Charge Obtained from an hit: {chargeFromHit}")
+
+totalCharge: int = chargeFromHit
+nHits: int = 1
+while totalCharge < 4000:
+    totalCharge = totalCharge + chargeFromHit
+    nHits = nHits + 1
+
+print(f"Got ulti in {nHits} hits!")
+        </pre>
         <p><b>Type:</b> The type of the character.</p>
         <b>Character types list</b>
         <pre class="hacc-box">Hero = Brawler
