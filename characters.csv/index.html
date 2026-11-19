@@ -167,13 +167,67 @@ CaptureFlag = For Capture Flag game mode.
 Minion_Mirage = A pet that is an illusion. Used for Leon's gadget.
 Npc_Boss_TownCrush = For Kaiju, boss that destroys the environment.
         </pre>
-        <p><b>DamagePercentFromAliens:</b></p>
+        <p><b>DamagePercentFromAliens:</b> If that value is 0&lt;X, the character will resist the damage for X% for NPCs.</p>
         <p><b>DefaultSkin:</b> Characters main and default model other than their skins.</p>
         <p><b>FileName:</b> Used for TNT box.</p>
         <p><b>BlueExportName:</b> Blue color of the TNT box.</p>
         <p><b>RedExportName:</b> Red color of the TNT box.</p>
         <p><b>ShadowExportName:</b> Shadow of the TNT box.</p>
         <p><b>AreaEffect:</b> Area Effect for the character, which is an effect that around the character; gives stun, damage, slow, speed etc. It is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/area_effects.csv/">area_effects.csv</a>.</p>
+        <p><b>DeathAreaEffect:</b> Area effect that triggers when the character dies. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/area_effects.csv">area_effects.csv</a>.</p>
+        <p><b>TakeDamageEffect:</b> A visual effect that triggers when you take damage, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>DeathEffect:</b> A visual effect that triggers when you die, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>MoveEffect:</b> Visual effect when you move, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>ReloadEffect:</b> Visual effect when you reload your ammo, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>OutOfAmmoEffect:</b> Visual effect when you are out of ammo, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>DryFireEffect</b> Visual effect when you are trying to attack while you are out of ammo, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>SpawnEffect:</b> A visual effect that triggers when the character spawns, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>MeleeHitEffect:</b> Melee attack effect, which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>AutoAttackStartEffect:</b> Auto attack effect/MainAtkEffect for pets who use auto attack rather than skills. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>BoneEffect1, 2, 3 and 4:</b> Effects that are attached to a parent bone. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>LoopedEffect and LoopedEffect2:</b> Visual effects that loops constantly for ingame. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/effects.csv/">effects.csv</a>.</p>
+        <p><b>KillCelebrationSoundVO:</b> Voicelines that occurs when you kill someone. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>InLeadCelebrationSoundVO:</b> Voicelines that occurs when you are on the lead. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>StartSoundVO:</b> Voicelines that occurs when the game starts. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>UseUltiSoundVO:</b> Voicelines that occurs when you use your super/ulti. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>TakeDamageSoundVO:</b> Voicelines that occurs when you take damage from the enemy. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>DeathSoundVO:</b> Voicelines that occurs when you die. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>AttackSoundVO:</b> Voicelines that occurs while attacking. Attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/sounds.csv/">sounds.csv</a>.</p>
+        <p><b>AttackStartEffectOffset:</b></p>
+        <p><b>TwoWeaponAttackEffectOffset:</b> This column controls the distance between projectiles in skills who use TwoGuns.</p>
+        <p><b>ShadowScaleX:</b> Character scale horizontally.</p>
+        <p><b>ShadowScaleY:</b> Character scale verically.</p>
+        <p><b>ShadowX and ShadowY:</b> You put 0 to make a character not have a shadow.</p>
+        <p><b>ShadowSkew:</b> I have no idea.</p>
+        <p><b>Scale:</b> Battle scale.</p>
+        <p><b>HeroScreenScale:</b> Scale of the brawler for the brawler menu.</p>
+        <p><b>FitToBoxScale:</b> Scale of the brawler for shop offers(?).</p>
+        <p><b>EndScreenScale:</b> Scale of the brawler for battle end scale.</p>
+        <p><b>GatchaScreenScale:</b> Scale of the brawler for boxes.</p>
+        <p><b>HomeScreenScale:</b> Scale of the brawler for home screen.</p>
+        <p><b>ShowPetInHeroScreen:</b> If you set that as "true", the pet of the brawler will be shown in the menu.</p>
+        <p><b>HeroScreenXOffset:</b> Brawler menu offset Left/Right.</p>
+        <p><b>HeroScreenZOffset:</b> Brawler menu offset Front/Back.</p>
+        <p><b>HeroScreenEmoteX:</b> Emote button offset left/right.</p>
+        <p><b>HeroScreenEmoteY:</b> Emote button offset up/down.</p>
+        <p><b>CollisionRadius:</b> Hitbox size for the brawler.</p>
+        <p><b>HealthBar:</b> Health bar type for the character, which is attached to health_bars.csv.</p>
+        <p><b>HealthBarOffsetY:</b> Health bars up/down offset.</p>
+        <p><b>FlyingHeight:</b> Unused.</p>
+        <p><b>ProjectileStartZ:</b> Where from the brawler hitbox the projectiles start.</p>
+        <p><b>StopMovementAfterMS:</b> Unused.</p>
+        <p><b>WaitMS:</b> Unused.</p>
+        <p><b>TID:</b> Text ID for the character.</p>
+        <p><b>ForceAttackAnimationToEnd:</b> Unused.</p>
+        <p><b>IconSWF:</b> File location for the brawlers portrait/icon.</p>
+        <p><b>IconExportName:</b> The name of the icon in <a href="https//lunarqwx.github.io/bsm-and-bsre-tutorials/SC Files">SC files.</p>
+        <p><b>RecoilAmount:</b></p>
+        <p><b>Homeworld:</b> If you set it as "human", the character will be a brawler.</p>
+        <p><b>FootstepClip:</b> I don't know, but it is usually setted as "footstep".</p>
+        <p><b>DifferentFootstepOffset:</b></p>
+        <p><b>FootstepIntervalMS:</b></p>
+        <p><b>AttackingWeaponScale:</b> The scale of the weapon & attack.</p>
+        <p><b></b></p>
         <script src="site.js"></script>
         <p>Join our Discord server for more help and support: <a href="https://dsc.gg/BTElements">https://dsc.gg/BTElements</a></p>
     </body>
