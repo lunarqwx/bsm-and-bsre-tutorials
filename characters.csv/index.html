@@ -241,13 +241,29 @@ Npc_Boss_TownCrush = For Kaiju, boss that destroys the environment.
         <p><b>ForceAttackAnimationToEnd:</b> Unused.</p>
         <p><b>IconSWF:</b> File location for the brawlers portrait/icon.</p>
         <p><b>IconExportName:</b> The name of the icon in <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/SC Files">SC files</a>.</p>
-        <p><b>RecoilAmount:</b></p>
-        <p><b>Homeworld:</b> If you set it as "human", the character will be a brawler.</p>
-        <p><b>FootstepClip:</b> I don't know, but it is usually setted as "footstep".</p>
-        <p><b>DifferentFootstepOffset:</b></p>
-        <p><b>FootstepIntervalMS:</b></p>
+        <p><b>RecoilAmount:</b> How much the character moves after an attack, usually paired with RecoilAnimation.</p>
+        <p><b>Homeworld:</b> Unused.</p>
+        <p><b>FootstepClip:</b> It's hardcoded, but without it the characters do not have a footstep. Rhinostep is for charges/dashes and set in <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/skills.csv">skills.csv</a>.</p>
+        <p><b>DifferentFootstepOffset:</b> Z offset for how far away it appears beyond the character.</p>
+        <p><b>FootstepIntervalMS:</b> How frequently the footsteps are spawned.</p>
         <p><b>AttackingWeaponScale:</b> The scale of the weapon & attack.</p>
-        <p><b></b></p>
+        <p><b>UseThrowingLeftWeaponBoneScaling:</b> Scales weapon when throwing, but for left side.</p>
+        <p><b>UseThrowingRightWeaponBoneScaling:</b> Scales weapon when throwing, but for right side.</p>
+        <p><b>CommonSetUpgradeBonus:</b> Legacy upgrade system column, for common rarity.</p>
+        <p><b>RareSetUpgradeBonus:</b> Legacy upgrade system column, for rare rarity.</p>
+        <p><b>SuperRareSetUpgradeBonus:</b> Legacy upgrade system column, for super rare rarity.</p>
+        <p><b>CanWalkOverWater:</b> This column was for making the character move over water, but it doesn't work anymore unless if you fix it with <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/Frida">Frida</a>.</p>
+        <p><b>UseColorMod:</b> You can alter the color of the characters texture with this column. The game gets the original valued per pixel itself.</p>
+        <b>The Formula of UseColorMod:</b>
+        <pre class="hacc-box">R'/G'/B' = (R/G/B * Mul) + Add</pre>
+        <p><b>ChargeUltiAutomatically:</b> Automatic ulti charge rate. If its higher you charge your super automatically faster.</p>
+        <p><b>VideoLink:</b> Unused.</p>
+        <p><b>ShouldEncodePetStatus:</b> Usually for hardcoded stuff. In Tick and RT's case, it encodes the pet status to use it for purposes such as turning pieces of the model invisible.</p>
+        <p><b>SecondaryPet:</b> Checks if this character is another characters pet.</p>
+        <p><b>ExtraMinions:</b> How many pets this character can have in one battle at max.</p>
+        <p><b>PetAutoSpawnDelay:</b> Sets how frequently the character's pet respawns after dying.</p>
+        <p><b>HasPowerLevels:</b> If it setted as "true", the brawler will have the same mechanic as surge, who gets an upgrade every super.</p>
+        <p><b>OffenseRating, DefenseRating and UtilityRating:</b> The rating on brawler screen, they can be setted as 5 max.</p>
         <script src="site.js"></script>
         <p>Join our Discord server for more help and support: <a href="https://dsc.gg/BTElements">https://dsc.gg/BTElements</a></p>
     </body>
