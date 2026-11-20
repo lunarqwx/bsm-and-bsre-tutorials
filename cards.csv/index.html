@@ -1,0 +1,142 @@
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cards.csv</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../shion.ico">
+    </head>
+    <body>
+      <h1>cards.csv Guide</h1>
+      <p>cards.csv is a CSV file that helps you add more features to your brawler for brawler screen.</p>
+      <p><b>Name:</b> The name of the card.</p>
+      <b>Card name types</b>
+      <pre class="hacc-box">X_unlock = Brawler card
+X_hp = HP
+X_abi = Attack skill type
+X_ulti = Super skill type
+X_unique = Star power
+X_gadget or X_customname = Gadget
+      </pre>
+      <p><b>IconSWF:</b> File path of the icon for the card.</p>
+      <p><b>IconExportName:</b> Icon export name from the <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/SC Files/">SC file</a> that written at IconSWF for the card icon.</p>
+      <p><b>Target:</b> Brawler CodeName which is attached to <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/characters.csv/">characters.csv</a>. You have to write the brawlers CodeName there to specify the card for the brawler.</p>
+      <p><b>LockedForChronos:</b> If you set it as "true", the card will be disabled and won't be shown on brawler screen.</p>
+      <p><b>DynamicRarityStartSeason:</b> If you set a season number for this column, brawlers rarity will be changed to chromatic.</p>
+      <p><b>MetaType:</b> The type of the card.</p>
+      <b>All MetaTypes:</b>
+      <pre class="hacc-box">0 = unlock
+1 = hp
+2 = weapon skill
+3 = ulti skill
+4 = star powers
+5 = accessory(gadgets)
+      </pre>
+      <p><b>RequiresCard:</b> Unused, but I think if you put another cards name there, you will need that card to unlock the card.</p>
+      <p><b>Type:</b> Type of the card. All types are unlock, hp, skill(weapon and ulti) and accessory. Star powers are hardcoded and have their own custom types.</p>
+      <b>All star power types:</b>
+      <pre class="hacc-box">freeze = Adds slow effect to the super. (Shelly 1st sp)
+speed = Speed buff entire match. (Colt 1st sp)
+berserker = 
+main_attack_burn = Creates burning area effect at the end of the projectile. (Brock 1st sp)
+bounced_bullets_stronger = If the brawlers projectile bounceable, each bounce will make the attack stronger. (Rico 1st sp)
+cactus_heal = Adds healing area effect to your super. (Spike 1st sp)
+heal_self_main_attack = Heal yourself each attack. (Barley 1st sp)
+repair_turret = 
+pet_lifesteal = When you attack, your pet gets healed. When your pet attacks, you get healed. (Nita 1st sp)
+pushback_self = Jump with your attack and super. (Dynamike 1st sp)
+fire_dot_ulti = Jumping and after landing, it will make you create a burning area. (El Primo 1st sp)
+steal_souls = Steal health when you kill someone. (Mortis 1st sp)
+cripple = 
+heal_main_attack = Your main attack will be able to heal your teammates. (Poco 1st sp)
+spot = Makes the brawler able to see further in bushes. (Bo 1st sp)
+ambush = When you are in bushes, you damage higher with the 1st attack. (Piper 1st sp)
+heal_others_main_attack = If your attack hits someone, you create a healing area effect for you and your allies. (Pam 1st sp)
+black_hole_monster = After using your super, you will have minions that attacks enemies. (Tara 1st sp)
+barrel_defense = Have shield while dashing. (Darryl 1st sp)
+self_destruct = When your pet dies, it will attack enemies last time. (Penny 1st sp)
+steal_souls2 = 
+aoe_regenerate = Have an area effect that heals your allies. (Gene 1st sp)
+repair_self = 
+speed_invisible = Get speed buff while being invisible. (Leon 1st sp)
+heal_forest = 
+projectile_speed = 
+speed_full_ammo = When your bar is full, you get speed buff. (Bibi 1st sp)
+medikit = You get a bar. When its full and your hp is low as %, you get instant heal. (Shelly 2nd sp)
+pet_attack_speed = Your pet attacks faster. (Nita 2nd sp)
+low_health_shield = 
+attack_range = The brawler gets range buff. (Colt 2nd sp)
+aoe_dot = 
+speed_after_ulti = Jumping and after landing, you will get a speed buff. (El Primo 2nd sp)
+heal_invisible = Heal yourself while being invisible. (Leon 2nd sp)
+ulti_burn = Your pets attack creates burning area effect. (Penny 2nd sp)
+prey_on_the_weak = 
+damage_super = If your super only heals ur allies, it will now also damage the enemies. (Poco 2nd sp)
+ulti_defense = 
+shield_homerun = 
+damage_buff_super = When your super is active, you get damage buff. (Rosa 2nd sp)
+stun_trap = Your pushback area effects will now stun your enemies. (Bo 2nd sp)
+turret_electricity = 
+extra_bullet = The brawler gets an extra ammo. (Brock 2nd sp)
+curve_ball = If the brawler has any BulletExplosion area effect, if will be harder to dodge. (Spike 2nd sp)
+reload_on_hit = If you hit someone with your attack, you will reload your ammo a bit. (Piper 2nd sp)
+gain_health = Gain more health. (Frank 2nd sp)
+longer_dash = Gain a bar, if that bar is full earn range buff for your next attack. (Mortis 2nd sp)
+gain_damage_super = More damage with super. (Dynamike 2nd sp)
+speed_low_health = When your HP is low, gain speed buff. (Rico 2nd sp)
+super_reload = 
+damage_main_attack = 
+damage_ulti = If your super is charged, get damage buff. (Gene 2nd sp)
+black_hole_healer = After using your super, you will have minions that heals you and your allies. (Tara 2nd sp)
+recharge = 
+super_range = Earn range buff but spread nerf with your super. (Shelly 3rd sp)
+immune_to_cc = Immune to all debuffs such as stun, slow and more. (Bull 3rd sp)
+cure_debuffs = Your main attack will also remove debuffs such as stun, slow and more. (Poco 3rd sp)
+super_destroy_walls = Your super will now destroy the walls. (Carl 3rd sp)
+larger_area_ulti = Your super pet will now have larger area effect. (8bit 1st sp)
+grow_from_damage = Attacking will give you extra HPs. (El Primo 3rd sp)
+armor = Earn shield at the start of the battle & respawning like Gus or Wendy's shield. (Colt 3rd sp)
+walking_turret = Your pet can now walk if it doesn't walk. (Jessie 3rd sp)
+shield_ulti = If your super is charged, you will have a shield. (Brock 3rd sp)
+pet = Bring your pet at the start of the battle. (Dynamike 3rd sp)
+spot_from_air = See all the bushes while jumping. (Piper 3rd sp)
+spikes_low_health = If you have low health, you will spam an area effect. (Spike 3rd sp)
+plugged_in = Get speed buff around your pet. (8bit 2nd sp)
+instant_charged_shot = If you miss your charged shot, gain the charged shot back for once. (Bea 1st sp)
+ignore_lethal_damage = Gain a shield that saves you with 1 HP. You can use it once a match. (Bea 2nd sp)
+increase_dmg_consecutive_dot = 
+ulti_heals_self =
+always_bounce_shot =
+spawn_speed =
+running_charges_ulti = Walking on the map will charge your super. (Max 1st sp)
+running_charges_weapon = Walking on the map will charge your ammo. (Max 2nd sp)
+reflect_damage_aoe = Trigger an area effect while taking damage. (Jacky 1st sp)
+reduce_all_damage = Gain damage resist for all damages. (Jacky 2nd sp)
+increase_missile_dmg_over_distance = 
+shield_while_ulti = While controlling your super, gain shield. (Nani 2nd sp)
+increased_explosion =
+bush_shield = Gain shield while in the bush. (Sprout 2nd sp)
+split_also_wall_hit = If your projectile splits after attacking an enemy only, now it can split with hitting a wall too. (Surge 1st sp)
+decrease_level_loss = If your HasPowerLevels from <a href="https://lunarqwx.github.io/bsm-and-bsre-tutorials/characters.csv/">characters.csv</a> is setted as "true", your 1st level will be ignored. (Surge 2nd sp)
+push_charge = Your dashable super can push the enemies now. (Colette 1st sp)
+shield_charge = If the brawler hits an enemy with the dashing super, they'll gain a shield as %. More enemies, more shield. (Colette 2nd sp)
+resurrect = When you die, you respawn for once a match. (8bit 3rd sp)
+improved_kickback = Works for Gale only. (Gale 3rd sp)
+      </pre>
+      <p><b>Skill:</b> Skill name if the type is skill.</p>
+      <p><b>Value, Value2 and Value3:</b> Value for the skills, star powers and gadgets.</p>
+      <p><b>Rarity:</b> Rarity of the brawler.</p>
+      <p><b>TID:</b> Text ID for the card.</p>
+      <p><b>PowerNumberTID, PowerNumber2TID and PowerNumber3TID:</b></p>
+      <p><b>PowerIcon1ExportName and PowerIcon2ExportName:</b></p>
+      <p><b>SortOrder:</b> It is for ordering the brawlers. If the number is lower, the brawler will be shown earlier in the brawler tab.</p>
+      <p><b>DontUpgradeAStat:</b> If you don't want this card to gain an upgrade, set this as "true".</p>
+      <p><b>HideDamageStat:</b> If you want to hide the damage stats of the brawler(which is in the brawler attack and ulti descs), set this as "true".</p>
+      <script src="site.js"></script>
+      <p>Join our Discord server for more help and support: <a href="https://dsc.gg/BTElements">https://dsc.gg/BTElements</a></p>
+    </body>
+</html>
